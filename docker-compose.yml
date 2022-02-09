@@ -1,8 +1,8 @@
 version: '3'
 services:
-  ls_mysql:
+  db_mysql:
     image: mysql:8.0.2
-    container_name: ls_mysql
+    container_name: db_mysql
     restart: unless-stopped
     tty: true
     ports:
@@ -14,9 +14,9 @@ services:
       MYSQL_USER: hoanglam
       MYSQL_PASSWORD: trantuan
       SERVICE_NAME: mysql8
-    volumes:
-      - ./my.cnf:/etc/mysql/my.cnf
-      #- ./db_data:/var/lib/mysql
+    #volumes:
+      #- ./my.cnf:/etc/mysql/my.cnf
+      #- ./db_data/:/var/lib/mysql
     networks:
       - app-network
 
