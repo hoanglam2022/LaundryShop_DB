@@ -2,7 +2,7 @@ version: '3'
 services:
   db_mysql:
     image: mysql:8.0.2
-    container_name: laundryshop_db_mysql
+    container_name: db_mysql
     restart: unless-stopped
     tty: true
     ports:
