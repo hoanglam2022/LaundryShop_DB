@@ -14,8 +14,8 @@ services:
       MYSQL_USER: hoanglam
       MYSQL_PASSWORD: trantuan
       SERVICE_NAME: mysql8
-    #volumes:
-      #- ./my.cnf:/etc/mysql/my.cnf
+    volumes:
+      - ./my.cnf:/etc/mysql/my.cnf
       #- ./db_data/:/var/lib/mysql
     networks:
       - app-network
